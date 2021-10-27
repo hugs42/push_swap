@@ -6,13 +6,11 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:14:25 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/10/27 16:16:05 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/10/27 17:17:03 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
-
-
 
 int		ft_parse_input(t_data *data, int argc, char **argv)
 {
@@ -45,7 +43,7 @@ int		ft_parse_input(t_data *data, int argc, char **argv)
 		}
 //		ft_free_input(input);
 	}
-//	ft_swap_stack(data);
-	ft_show_stack(data);
+	ft_reverse_stack(data);
+	ft_show_stack(data, 1);
 	return (0);
 }

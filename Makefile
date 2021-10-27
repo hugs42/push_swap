@@ -6,7 +6,7 @@
 #    By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/15 10:55:03 by hugsbord          #+#    #+#              #
-#    Updated: 2021/10/27 16:22:54 by hugsbord         ###   ########.fr        #
+#    Updated: 2021/10/27 17:07:50 by hugsbord         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,11 @@ NAME_BONUS = checker
 SRCS =	./srcs/main.c \
 		./srcs/parser.c \
 		./srcs/init.c \
-		./srcs/check.c
+		./srcs/check.c \
+		./srcs/op_swap.c \
+		./srcs/op_push.c \
+		./srcs/op_rotate.c \
+		./srcs/op_reverse.c
 
 INC = -I ./includes
 
