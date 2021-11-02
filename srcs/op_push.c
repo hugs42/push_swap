@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:59:56 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/10/27 17:04:35 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/02 16:22:03 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_pb(t_data *data)
 	if (data->a_first >= 0)
 	{
 		data->b_first += 1;
-		data->b[data->a_first] = data->a[data->a_first];
+		data->b[data->b_first] = data->a[data->a_first];
 		data->a_first -= 1;
 		ft_putstr_fd("pb\n", 1);
 	}

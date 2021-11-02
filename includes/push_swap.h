@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 11:05:37 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/02 12:28:53 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/02 16:13:25 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		ft_init_data(t_data *data, int len);
 int		ft_check_double(int *input, int len, int nb);
 int		ft_check_char(char *input);
 int		ft_check_len(char *input, char c);
-void	ft_show_stack(t_data *data, int stack);
+void	ft_show_stack(t_data *data, int stack, int len);
 void	ft_reverse_stack(t_data *data);
 void	ft_sa(t_data *data, int is_op);
 void	ft_sb(t_data *data, int is_op);
@@ -55,5 +55,8 @@ void	ft_rr(t_data *data);
 void	ft_rra(t_data *data, int is_op);
 void	ft_rrb(t_data *data, int is_op);
 void	ft_rrr(t_data *data);
+int		ft_sorting(t_data *data, int len);
+int		ft_sort_3_arg(t_data *data, int len);
+int		ft_sort_5_arg(t_data *data, int len);
 
 #endif
