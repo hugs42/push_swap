@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 11:05:37 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/10/27 17:40:43 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/02 12:28:53 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,14 @@
 # define SUCCESS		1
 # define ERROR			-1
 
-typedef struct	s_data
+typedef struct		s_node
+{
+	int				num;
+	struct s_node	*next;
+	struct s_node	*prev;
+}				t_node;
+
+typedef struct		s_data
 {
 	int			*a;
 	int			*b;

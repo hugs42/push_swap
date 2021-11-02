@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:51:56 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/10/27 16:58:42 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/02 13:16:00 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_sa(t_data *data, int is_op)
 	{
 		tmp = data->a[data->a_first];
 		data->a[data->a_first] = data->a[data->a_first - 1];
-		data->a[data->a_first] = tmp;
+		data->a[data->a_first - 1] = tmp;
 	}
 	if (is_op)
 		ft_putstr_fd("sa\n", 1);
@@ -36,10 +36,10 @@ void	ft_sb(t_data *data, int is_op)
 	{
 		tmp = data->b[data->b_first];
 		data->b[data->b_first] = data->b[data->b_first - 1];
-		data->b[data->b_first] = tmp;
+		data->b[data->b_first - 1] = tmp;
 	}
 	if (is_op)
-		ft_putstr_fd("op\n", 1);
+		ft_putstr_fd("sb\n", 1);
 }
 
 void	ft_ss(t_data *data)

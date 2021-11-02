@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 12:43:01 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/10/27 17:19:09 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/02 13:20:39 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,58 @@ int		ft_already_sort_a(t_data *data, int len)
 			return (0);
 		i++;
 	}
-	ft_putstr_fd("already sort\n", 1);
+//;	ft_putstr_fd("a already sort\n", 1);
+	return (SUCCESS);
+}
+
+int		ft_already_sort_b(t_data *data, int len)
+{
+	int		i;
+
+	i = 0;
+	i = data->b_first - len + 1;
+	while (i < data->b_first)
+	{
+		if (data->b[i] < data->b[i + 1])
+			return (0);
+		i++;
+	}
+//	ft_putstr_fd("b already sort\n", 1);
+	return (SUCCESS);
+}
+
+int		ft_sort_5_arg(t_data *data)
+{
+	
+	return (SUCCESS);
+}
+
+int		ft_sort_3_arg(t_data *data)
+{
+	if (data->a[2] > data->a[1])
+		ft_sa(data, 1);
+	if (data->a[0] < data->a[1])
+	{
+//		ft_putstr_fd("OKKK", 1);
+		ft_rra(data, 1);
+		if (data->a[1] < data->a[2])
+			ft_sa(data, 1);
+	}
+	return (SUCCESS);
+}
+
+int		ft_sorting(t_data *data, int len)
+{
+	if (len == 3)
+	{
+//		ft_putstr_fd("\nlen = 3\n", 1);
+		ft_sort_3_arg(data);
+	}
+	else if (len == 5)
+	{
+//		ft_putstr_fd("\nlen = 5\n", 1);
+//		ft_sort_5_arg(data);
+	}
 	return (SUCCESS);
 }
 
@@ -99,7 +150,8 @@ int		ft_push_swap(int argc, char **argv)
 	}
 	if (ft_already_sort_a(&data, data.len) == SUCCESS)
 		exit(0);
-	
+	else
+		ft_sorting(&data, data.len);
 	return (0);
 }
 

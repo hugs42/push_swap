@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:21:14 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/10/27 16:22:29 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/02 13:22:16 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		ft_check_char(char *input)
 	i = 0;
 	while (input[i])
 	{
-		if (input[i] < 48 || input[i] > 57)
+		if ((input[i] < 48 || input[i] > 57) && input[i] != '-')
 			return (ERROR);
 		i++;
 	}
