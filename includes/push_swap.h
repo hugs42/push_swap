@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 11:05:37 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 17:06:48 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:06:41 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ typedef struct		s_data
 	int			a_first;
 	int			b_first;
 	int			len;
+	int			median;
+	int			quarter;
 }				t_data;
 
 int		ft_parse_input(t_data *data, int argc, char **argv);
@@ -56,5 +58,6 @@ void	ft_sort_stack(int *stack, int len);
 int		ft_biggest_nb(t_data *data, int len, int stack);
 int		ft_smallest_nb(t_data *data, int len, int stack);
 int		ft_sort_by_insertion(t_data *data);
-
+int		ft_median(t_data *data);
+int		ft_check_max(int nb);
 #endif

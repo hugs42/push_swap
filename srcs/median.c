@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insertion_sorter.c                                 :+:      :+:    :+:   */
+/*   median.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 16:54:17 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 18:43:42 by hugsbord         ###   ########.fr       */
+/*   Created: 2021/11/03 17:10:39 by hugsbord          #+#    #+#             */
+/*   Updated: 2021/11/03 17:53:40 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
 
-int		ft_sort_by_insertion(t_data *data)
+int		ft_median(t_data *data)
 {
-	ft_median(data);
-	while (data->a)
-	{
-//		ft_a_to_b(data);
-	}
-	return (SUCCESS);
-}
+	int		i;
+	int		quarter_len;
+	int		*tmp_stack;
 
-
-int		ft_quicksorting(t_data *data)
-{
-	int pivot;
-	int i;
-	int j;
-	int start;
-	int	end;
-
-	start = 0;
-	end = data->len;
+	i = 0;
+	quarter_len = 0;
+	tmp_stack = ft_stackdup(data, data->len, 1);
+	ft_sort_stack(tmp_stack, data->len);
+	data->median = data->len / 2;
+	data->quarter = data->len / 4;
+	
 	return (SUCCESS);
 }

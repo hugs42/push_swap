@@ -6,11 +6,25 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:21:14 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/02 13:22:16 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:07:29 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
+
+int		ft_check_max(int nb)
+{
+	int		min;
+	int max;
+
+	min = -2147483648;
+	max = 2147483647;
+	if (nb > max)
+		return (ERROR);
+	if (nb < min)
+		return (ERROR);
+	return (SUCCESS);
+}
 
 int		ft_check_len(char *input, char c)
 {
