@@ -6,15 +6,13 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 11:05:37 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 13:41:16 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 17:06:48 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP
 # define PUSH_SWAP
 
-#include "./get_next_line.h"
-#include <stdio.h>
 #include <unistd.h>
 #include "./../libft/libft.h"
 
@@ -48,10 +46,15 @@ void	ft_rr(t_data *data);
 void	ft_rra(t_data *data, int is_op);
 void	ft_rrb(t_data *data, int is_op);
 void	ft_rrr(t_data *data);
-int		ft_sorting(t_data *data, int len);
-int		ft_sort_2_arg(t_data *data, int len);
-int		ft_sort_3_arg(t_data *data, int len);
-int		ft_sort_4_arg(t_data *data, int len);
-int		ft_sort_5_arg(t_data *data, int len);
+int		ft_sorting(t_data *data);
+int		ft_sort_2_arg(t_data *data, int stack);
+int		ft_sort_3_arg(t_data *data);
+int		ft_sort_4_arg(t_data *data);
+int		ft_sort_5_arg(t_data *data);
+int		*ft_stackdup(t_data *data, int len, int stack);
+void	ft_sort_stack(int *stack, int len);
+int		ft_biggest_nb(t_data *data, int len, int stack);
+int		ft_smallest_nb(t_data *data, int len, int stack);
+int		ft_sort_by_insertion(t_data *data);
 
 #endif

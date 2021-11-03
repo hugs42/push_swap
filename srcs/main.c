@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 12:43:01 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 08:59:58 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 17:02:22 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,12 +113,12 @@ int		ft_push_swap(int argc, char **argv)
 	if (ft_parse_input(&data, argc, argv) == ERROR)
 	{
 		ft_putstr_fd("Error\n", 1);
-		exit (0);
+		exit(0);
 	}
 	if (ft_already_sort_a(&data, data.len) == SUCCESS)
 		exit(0);
 	else
-		ft_sorting(&data, data.len);
+		ft_sorting(&data);
 	return (0);
 }
 

@@ -1,13 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   insertion_sorter.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/15 11:06:04 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/04/15 11:09:52 by hugsbord         ###   ########.fr       */
+/*   Created: 2021/11/03 16:54:17 by hugsbord          #+#    #+#             */
+/*   Updated: 2021/11/03 17:06:42 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./../includes/push_swap.h"
+
+int		ft_sort_by_insertion(t_data *data)
+{
+
+	return (SUCCESS);
+}

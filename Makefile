@@ -6,7 +6,7 @@
 #    By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/15 10:55:03 by hugsbord          #+#    #+#              #
-#    Updated: 2021/11/02 13:28:14 by hugsbord         ###   ########.fr        #
+#    Updated: 2021/11/03 16:58:07 by hugsbord         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ SRCS =	./srcs/main.c \
 		./srcs/op_push.c \
 		./srcs/op_rotate.c \
 		./srcs/op_reverse.c \
-		./srcs/sorter.c
+		./srcs/sorter.c \
+		./srcs/utils.c \
+		./srcs/insertion_sorter.c
 
 INC = -I ./includes
 

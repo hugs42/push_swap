@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:14:25 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/02 16:13:01 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 17:01:21 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ int		ft_parse_input(t_data *data, int argc, char **argv)
 		{
 			data->a_first += 1;
 			if (ft_check_char(input[tmp_i]) == ERROR)
-			{
-				ft_putstr_fd("sss",1);
 				return (ERROR);
-			}
 			data->a[data->a_first] = ft_atoi(input[tmp_i]);
 //			if (!data->a[data->a_first])
 //			{
