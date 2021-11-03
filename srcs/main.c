@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 12:43:01 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/02 16:26:09 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 08:59:58 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ void	ft_show_stack(t_data *data, int stack, int len)
 	i = 0;
 	if (stack == 1)
 	{
-		while (len > 0)//(data->a[i] <= len)
+		while (len > 0)
 		{
-//			ft_putstr_fd("OK", 1);
 			ft_putnbr_fd(data->a[i], 1);
 			ft_putchar_fd(' ', 1 );
 			i++;
