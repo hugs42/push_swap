@@ -6,11 +6,52 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:25:41 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 13:37:04 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 16:07:27 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
+
+int		*ft_stackdup(t_data *data, int len, int stack)
+{
+	int *tmp_stack;
+	int i;
+
+	tmp_stack = (int *)malloc(sizeof(int) * len);
+	if (!tmp_stack)
+		exit(1);
+	i = -1;
+	if (stack == 1)
+	{
+		while (++i < len)
+			tmp_stack[i] = data->a[data->a_first - i];
+	}
+	return (tmp_stack);
+}
+
+void			ft_sort_stack(int *stack, int len)
+{
+	int i;
+	int j;
+	int tmp;
+
+	i = 0;
+	while (i < len )
+	{
+		j = i + 1;
+		while (j < len)
+		{
+			if (stack[i] > stack[j])
+			{
+				tmp = stack[i];
+				stack[i] = stack[j];
+				stack[j] = tmp;
+			}
+			j++;
+		}
+		i++;
+	}
+}
 
 int		ft_biggest_nb(t_data *data, int len, int stack)
 {
@@ -75,73 +116,35 @@ int		ft_sort_5_arg(t_data *data, int len)
 {
 	int i;
 	int	a_first_tmp;
-	int *arr;
 	int	biggest;
-
-	biggest = ft_biggest_nb(data, len, 1);
+	int smallest;
+	int *tmp_stack;
 
 	i = 0;
-//	ft_putnbr_fd(bigger_nb, 1);
-//	ft_putstr_fd("\n$$", 1);
-	ft_pb(data);
-	ft_pb(data);
-	ft_sort_3_arg(data, len);
-	ft_show_stack(data, 1, len);
-	ft_putstr_fd("\n", 1);
-	ft_show_stack(data, 2, len);
-	ft_putstr_fd("\n", 1);
-	ft_putnbr_fd(data->a_first, 1);
-	ft_putstr_fd("\n####", 1);
-//	ft_reverse_stack(data);
-//	if (data->b[0] > data->b[1])
-//		ft_sb(data, 1);
-//	while (i < 5)
-//	{
-//		ft_putstr_fd("##\n", 1);
-//		ft_putnbr_fd(data->a[0], 1);
-//		ft_putstr_fd("##", 1);
-//		ft_putnbr_fd(data->b[1], 1);
-//		ft_putstr_fd("##\n", 1);
-	a_first_tmp = data->a_first;
-	while (i < 2)
+	biggest = ft_biggest_nb(data, len, 1);
+	smallest = ft_smallest_nb(data, len, 1);
+	tmp_stack = ft_stackdup(data, len, 1);
+	ft_sort_stack(tmp_stack, len);
+	while (i <= len)
 	{
-		if (data->b[i] > data->a[data->a_first])
-		{
-			while (data->b[i] > data->a[a_first_tmp])
-			{
-				ft_ra(data, 1);
-				a_first_tmp++;
-			}
+		if (tmp_stack[1] >= data->a[data->a_first])
+			ft_pb(data);
+		else
 			ft_ra(data, 1);
-			ft_pa(data);
-			while (data->a[0] != biggest)
-				ft_ra(data, 1);
-//		ft_ra(data, 1);
-//			ft_pa(data);
-		}
 		i++;
 	}
-	if (data->b[1] < data->a[2])
-	{
-//		ft_pa(data);
-	}
-	if (data->b[0] > data->a[0])
-	{
-//		ft_pa(data);
-//		ft_ra(data, 1);
-	}
-//		else if (data->b[i] < data->a[data->a_first])
-//			ft_ra(data, 1);
-//		else if (data->b[i] > data->a[5])
-//			ft_pa(data);
-//		i++;
-//	}
+	ft_sort_3_arg(data,len);
+		if (data->b[0] > data->b[1])
+		ft_sb(data, 1);
+//	ft_sort_2_arg(data, len);
+	ft_pa(data);
+	ft_pa(data);
 //	ft_putnbr_fd(len, 1);
-	ft_show_stack(data, 1, len);
-	ft_putstr_fd("\n", 1);
-	ft_show_stack(data, 2, len);
-	ft_putstr_fd("\n", 1);
-	ft_putnbr_fd(data->a_first, 1);
+//	ft_show_stack(data, 1, len);
+//	ft_putstr_fd("\n", 1);
+//	ft_show_stack(data, 2, len);
+//	ft_putstr_fd("\n", 1);
+//	ft_putnbr_fd(data->a_first, 1);
 	return (SUCCESS);
 }
 
@@ -155,6 +158,7 @@ int	ft_sort_4_arg(t_data *data, int len)
 	ft_pb(data);
 	ft_sort_3_arg(data, len);
 	ft_pa(data);
+//	ft_show_stack(data, len, 1);
 	return (SUCCESS);
 }
 
@@ -188,26 +192,13 @@ int		ft_sort_2_arg(t_data *data, int stack)
 
 int		ft_sorting(t_data *data, int len)
 {
-//	ft_putnbr_fd(ft_biggest_nb(data, len, 1), 1);
-//	ft_show_stack(data, 1);
 	if (len == 2)
 		ft_sort_2_arg(data, 1);
 	if (len == 3)
-	{
 		ft_sort_3_arg(data, len);
-//	ft_show_stack(data, 1, len);
-//	ft_putstr_fd("\n", 1);
-//	ft_show_stack(data, 2, len);
-//	ft_putstr_fd("\n", 1);
-//	ft_putnbr_fd(data->a_first, 1);
-	}
 	else if (len == 4)
-	{
 		ft_sort_4_arg(data, len);
-	}
 	else if (len == 5)
-	{
 		ft_sort_5_arg(data, len);
-	}
 	return (SUCCESS);
 }

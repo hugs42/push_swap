@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 11:05:37 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/02 16:13:25 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 13:41:16 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,6 @@
 
 # define SUCCESS		1
 # define ERROR			-1
-
-typedef struct		s_node
-{
-	int				num;
-	struct s_node	*next;
-	struct s_node	*prev;
-}				t_node;
 
 typedef struct		s_data
 {
@@ -56,7 +49,9 @@ void	ft_rra(t_data *data, int is_op);
 void	ft_rrb(t_data *data, int is_op);
 void	ft_rrr(t_data *data);
 int		ft_sorting(t_data *data, int len);
+int		ft_sort_2_arg(t_data *data, int len);
 int		ft_sort_3_arg(t_data *data, int len);
+int		ft_sort_4_arg(t_data *data, int len);
 int		ft_sort_5_arg(t_data *data, int len);
 
 #endif
