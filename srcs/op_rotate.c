@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 17:05:06 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/10/27 17:29:05 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:13:23 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_ra(t_data *data, int is_op)
 {
 	int		i;
 	int		tmp;
-
 
 	i = data->a_first;
 	tmp = 0;

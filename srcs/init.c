@@ -6,13 +6,13 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:16:50 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 17:33:36 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:12:30 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
 
-int		ft_init_data(t_data *data, int len)
+int	ft_init_data(t_data *data, int len)
 {
 	data->len = len;
 	data->a_first = -1;

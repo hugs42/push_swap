@@ -6,17 +6,17 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:25:41 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 17:08:00 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:17:26 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
 
-int		ft_sort_5_arg(t_data *data)
+int	ft_sort_5_arg(t_data *data)
 {
-	int i;
+	int	i;
 	int	a_first_tmp;
-	int *tmp_stack;
+	int	*tmp_stack;
 
 	i = 0;
 	tmp_stack = ft_stackdup(data, data->len, 1);
@@ -30,16 +30,10 @@ int		ft_sort_5_arg(t_data *data)
 		i++;
 	}
 	ft_sort_3_arg(data);
-		if (data->b[0] > data->b[1])
+	if (data->b[0] > data->b[1])
 		ft_sb(data, 1);
 	ft_pa(data);
 	ft_pa(data);
-//	ft_putnbr_fd(len, 1);
-//	ft_show_stack(data, 1, len);
-//	ft_putstr_fd("\n", 1);
-//	ft_show_stack(data, 2, len);
-//	ft_putstr_fd("\n", 1);
-//	ft_putnbr_fd(data->a_first, 1);
 	return (SUCCESS);
 }
 
@@ -56,7 +50,7 @@ int	ft_sort_4_arg(t_data *data)
 	return (SUCCESS);
 }
 
-int		ft_sort_3_arg(t_data *data)
+int	ft_sort_3_arg(t_data *data)
 {
 	if (data->a[2] > data->a[1])
 		ft_sa(data, 1);
@@ -69,7 +63,7 @@ int		ft_sort_3_arg(t_data *data)
 	return (SUCCESS);
 }
 
-int		ft_sort_2_arg(t_data *data, int stack)
+int	ft_sort_2_arg(t_data *data, int stack)
 {
 	if (stack == 1)
 	{
@@ -84,7 +78,7 @@ int		ft_sort_2_arg(t_data *data, int stack)
 	return (SUCCESS);
 }
 
-int		ft_sorting(t_data *data)
+int	ft_sorting(t_data *data)
 {
 	if (data->len == 2)
 		ft_sort_2_arg(data, 1);

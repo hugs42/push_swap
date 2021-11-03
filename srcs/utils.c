@@ -6,16 +6,16 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:14:22 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 16:15:42 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:15:38 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
 
-int		*ft_stackdup(t_data *data, int len, int stack)
+int	*ft_stackdup(t_data *data, int len, int stack)
 {
-	int *tmp_stack;
-	int i;
+	int	*tmp_stack;
+	int	i;
 
 	tmp_stack = (int *)malloc(sizeof(int) * len);
 	if (!tmp_stack)
@@ -29,14 +29,14 @@ int		*ft_stackdup(t_data *data, int len, int stack)
 	return (tmp_stack);
 }
 
-void			ft_sort_stack(int *stack, int len)
+void	ft_sort_stack(int *stack, int len)
 {
-	int i;
-	int j;
-	int tmp;
+	int	i;
+	int	j;
+	int	tmp;
 
 	i = 0;
-	while (i < len )
+	while (i < len)
 	{
 		j = i + 1;
 		while (j < len)
@@ -53,8 +53,7 @@ void			ft_sort_stack(int *stack, int len)
 	}
 }
 
-
-int		ft_biggest_nb(t_data *data, int len, int stack)
+int	ft_biggest_nb(t_data *data, int len, int stack)
 {
 	int		i;
 	int		biggest;
@@ -83,7 +82,7 @@ int		ft_biggest_nb(t_data *data, int len, int stack)
 	return (biggest);
 }
 
-int		ft_smallest_nb(t_data *data, int len, int stack)
+int	ft_smallest_nb(t_data *data, int len, int stack)
 {
 	int	i;
 	int	smallest;
@@ -91,7 +90,6 @@ int		ft_smallest_nb(t_data *data, int len, int stack)
 	i = 0;
 	if (stack == 1)
 	{
-//		ft_putnbr_fd(data->a[0],1);
 		smallest = data->a[0];
 		while (i < len - 1)
 		{

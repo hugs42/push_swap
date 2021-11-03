@@ -6,16 +6,16 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:21:14 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 19:07:29 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/03 19:12:05 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
 
-int		ft_check_max(int nb)
+int	ft_check_max(int nb)
 {
-	int		min;
-	int max;
+	int	min;
+	int	max;
 
 	min = -2147483648;
 	max = 2147483647;
@@ -26,7 +26,7 @@ int		ft_check_max(int nb)
 	return (SUCCESS);
 }
 
-int		ft_check_len(char *input, char c)
+int	ft_check_len(char *input, char c)
 {
 	int			i;
 	int			is_char;
@@ -51,7 +51,7 @@ int		ft_check_len(char *input, char c)
 	return (len);
 }
 
-int		ft_check_char(char *input)
+int	ft_check_char(char *input)
 {
 	int		i;
 
@@ -65,7 +65,7 @@ int		ft_check_char(char *input)
 	return (SUCCESS);
 }
 
-int		ft_check_double(int *input, int len, int nb)
+int	ft_check_double(int *input, int len, int nb)
 {
 	int		i;
 
@@ -76,6 +76,5 @@ int		ft_check_double(int *input, int len, int nb)
 			return (ERROR);
 		i++;
 	}
-
 	return (SUCCESS);
 }
