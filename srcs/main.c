@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 12:43:01 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 17:02:22 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:29:19 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,38 +68,6 @@ int		ft_free_input(char **input)
 		i++;
 	}
 	free(input);
-	return (SUCCESS);
-}
-
-int		ft_already_sort_a(t_data *data, int len)
-{
-	int		i;
-
-	i = 0;
-	i = data->a_first - len + 1;
-	while (i < data->a_first)
-	{
-		if (data->a[i] < data->a[i + 1])
-			return (0);
-		i++;
-	}
-//;	ft_putstr_fd("a already sort\n", 1);
-	return (SUCCESS);
-}
-
-int		ft_already_sort_b(t_data *data, int len)
-{
-	int		i;
-
-	i = 0;
-	i = data->b_first - len + 1;
-	while (i < data->b_first)
-	{
-		if (data->b[i] < data->b[i + 1])
-			return (0);
-		i++;
-	}
-//	ft_putstr_fd("b already sort\n", 1);
 	return (SUCCESS);
 }
 

@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:25:41 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 19:17:26 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:18:56 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,15 @@ int	ft_sort_5_arg(t_data *data)
 	return (SUCCESS);
 }
 
-int	ft_sort_4_arg(t_data *data)
+int	ft_sort_4_arg(t_data *data, int stack)
 {
+	int a;
 	int	smallest;
 
-	smallest = ft_smallest_nb(data, data->len, 1);
+	a = 1;
+	if (stack == 2)
+		a = 2;
+	smallest = ft_smallest_nb(data, data->len, a);
 	while (data->a[data->a_first] != smallest)
 		ft_ra(data, 1);
 	ft_pb(data);
@@ -85,10 +89,10 @@ int	ft_sorting(t_data *data)
 	else if (data->len == 3)
 		ft_sort_3_arg(data);
 	else if (data->len == 4)
-		ft_sort_4_arg(data);
+		ft_sort_4_arg(data, 1);
 	else if (data->len == 5)
 		ft_sort_5_arg(data);
-	else if (data->len <= 100)
-		ft_sort_by_insertion(data);
+	else
+		ft_quicksort_a_to_b(data, data->len);
 	return (SUCCESS);
 }
