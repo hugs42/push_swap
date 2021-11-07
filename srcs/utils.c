@@ -6,11 +6,41 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:14:22 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/06 18:25:18 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/07 03:29:22 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
+
+int	ft_already_sort_a(t_data *data, int len)
+{
+	int		i;
+
+	i = 0;
+	i = data->a_first - len + 1;
+	while (i < data->a_first)
+	{
+		if (data->a[i] < data->a[i + 1])
+			return (0);
+		i++;
+	}
+	return (SUCCESS);
+}
+
+int	ft_already_sort_b(t_data *data, int len)
+{
+	int		i;
+
+	i = 0;
+	i = data->b_first - len + 1;
+	while (i < data->b_first)
+	{
+		if (data->b[i] > data->b[i + 1])
+			return (0);
+		i++;
+	}
+	return (SUCCESS);
+}
 
 int	*ft_stackdup(t_data *data, int len, int stack)
 {

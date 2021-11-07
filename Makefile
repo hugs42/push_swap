@@ -6,7 +6,7 @@
 #    By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/15 10:55:03 by hugsbord          #+#    #+#              #
-#    Updated: 2021/11/06 17:27:57 by hugsbord         ###   ########.fr        #
+#    Updated: 2021/11/06 19:50:52 by hugsbord         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,9 @@ SRCS =	./srcs/main.c \
 		./srcs/op_reverse.c \
 		./srcs/sorter.c \
 		./srcs/utils.c \
-		./srcs/quicksort.c
+		./srcs/quicksort.c \
+		./srcs/quicksort_few.c
+
 
 INC = -I ./includes
 

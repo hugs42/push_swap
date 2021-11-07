@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 12:43:01 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/06 17:29:19 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/07 03:30:57 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_show_stack(t_data *data, int stack, int len)
 {
-	int i;
+	int	i;
 	int	stack_nb;
 
 	i = 0;
@@ -58,9 +58,9 @@ void	ft_reverse_stack(t_data *data)
 	}
 }
 
-int		ft_free_input(char **input)
+int	ft_free_input(char **input)
 {
-	int		i;
+	int	i;
 
 	while (input[i])
 	{
@@ -71,7 +71,7 @@ int		ft_free_input(char **input)
 	return (SUCCESS);
 }
 
-int		ft_push_swap(int argc, char **argv)
+int	ft_push_swap(int argc, char **argv)
 {
 	int		i;
 	int		len;
@@ -90,7 +90,7 @@ int		ft_push_swap(int argc, char **argv)
 	return (0);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc >= 2)
 	{

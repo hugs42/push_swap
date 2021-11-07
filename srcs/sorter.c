@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:25:41 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/06 17:18:56 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/07 03:27:52 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_sort_5_arg(t_data *data)
 
 int	ft_sort_4_arg(t_data *data, int stack)
 {
-	int a;
+	int	a;
 	int	smallest;
 
 	a = 1;

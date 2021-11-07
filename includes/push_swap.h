@@ -6,26 +6,26 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 11:05:37 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/06 19:37:14 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/07 15:30:57 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include <unistd.h>
-#include "./../libft/libft.h"
+# include <unistd.h>
+# include "./../libft/libft.h"
 
 # define SUCCESS		1
 # define ERROR			-1
 
-typedef struct	s_pivot
+typedef struct s_pivot
 {
 	int			p1;
 	int			p2;
 }				t_pivot;
 
-typedef struct	s_counter
+typedef struct s_counter
 {
 	int			ra_count;
 	int			rb_count;
@@ -33,7 +33,7 @@ typedef struct	s_counter
 	int			pa_count;
 }				t_counter;
 
-typedef struct		s_data
+typedef struct s_data
 {
 	int			*a;
 	int			*b;
@@ -73,4 +73,7 @@ int		ft_already_sort_a(t_data *data, int len);
 int		ft_already_sort_b(t_data *data, int len);
 int		ft_quicksort_a_to_b(t_data *data, int len);
 int		ft_quicksort_b_to_a(t_data *data, int len);
+void	ft_quicksort_few_a(t_data *data, int len);
+void	ft_quicksort_few_b(t_data *data, int len);
+
 #endif

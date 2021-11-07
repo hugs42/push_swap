@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:14:25 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 19:04:33 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/07 15:34:02 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,8 @@ int		ft_parse_input(t_data *data, int argc, char **argv)
 			if (ft_check_max(data->a[data->a_first]) == ERROR)
 				return (ERROR);
 		}
-//		ft_free_input(input);
+		ft_free_input(input);
 	}
 	ft_reverse_stack(data);
-//	ft_putnbr_fd(data->a_first, 1);
-//	ft_putstr_fd("\n***",1);
-//	ft_show_stack(data, 1, len);
 	return (0);
 }
