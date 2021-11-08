@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 11:05:37 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/07 15:30:57 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/08 09:50:53 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,5 @@ int		ft_quicksort_a_to_b(t_data *data, int len);
 int		ft_quicksort_b_to_a(t_data *data, int len);
 void	ft_quicksort_few_a(t_data *data, int len);
 void	ft_quicksort_few_b(t_data *data, int len);
-
+void	ft_exit(t_data *data);
 #endif

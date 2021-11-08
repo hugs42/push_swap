@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:14:22 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/07 03:29:22 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/08 09:41:38 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	*ft_stackdup(t_data *data, int len, int stack)
 	int	*tmp_stack;
 	int	i;
 
-	tmp_stack = (int *)malloc(sizeof(int) * len);
+	tmp_stack = ft_calloc(len, sizeof(int));
 	if (!tmp_stack)
 		exit(1);
 	i = -1;

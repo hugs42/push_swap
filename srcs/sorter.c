@@ -34,6 +34,7 @@ int	ft_sort_5_arg(t_data *data)
 		ft_sb(data, 1);
 	ft_pa(data);
 	ft_pa(data);
+	free(tmp_stack);
 	return (SUCCESS);
 }
 
