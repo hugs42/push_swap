@@ -6,13 +6,11 @@
 #    By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/15 10:55:03 by hugsbord          #+#    #+#              #
-#    Updated: 2021/11/08 09:52:07 by hugsbord         ###   ########.fr        #
+#    Updated: 2021/11/08 10:54:31 by hugsbord         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-
-NAME_BONUS = checker
 
 SRCS =	./srcs/main.c \
 		./srcs/parser.c \

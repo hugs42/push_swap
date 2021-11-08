@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:14:22 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/08 09:41:38 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:50:32 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ int	ft_already_sort_b(t_data *data, int len)
 
 int	*ft_stackdup(t_data *data, int len, int stack)
 {
-	int	*tmp_stack;
 	int	i;
+	int	*tmp_stack;
 
+	i = -1;
 	tmp_stack = ft_calloc(len, sizeof(int));
 	if (!tmp_stack)
 		exit(1);
-	i = -1;
 	if (stack == 1)
 	{
 		while (++i < len)
