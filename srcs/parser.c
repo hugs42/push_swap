@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:14:25 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/08 10:48:15 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/10 10:51:26 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ int	ft_check_input(t_data *data, char **input)
 		data->a_first += 1;
 		if (ft_check_char(input[tmp_i]) == ERROR)
 			return (ERROR);
-		data->a[data->a_first] = ft_atoi(input[tmp_i]);
+		data->a[data->a_first] = ft_atoi_limit(data, input[tmp_i]);
+		if (data->int_limit == 1)
+			return (ERROR);
 		if (ft_check_double(data->a, data->a_first, data->a[data->a_first])
 			== ERROR)
-			return (ERROR);
-		if (ft_check_max(data->a[data->a_first]) == ERROR)
 			return (ERROR);
 	}
 	return (SUCCESS);

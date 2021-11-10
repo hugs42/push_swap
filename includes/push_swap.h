@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 11:05:37 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/08 09:50:53 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/10 10:50:17 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct s_data
 	int			a_first;
 	int			b_first;
 	int			len;
+	int			int_limit;
 }				t_data;
 
 int		ft_parse_input(t_data *data, int argc, char **argv);
@@ -47,8 +48,8 @@ int		ft_init_data(t_data *data, int len);
 int		ft_check_double(int *input, int len, int nb);
 int		ft_check_char(char *input);
 int		ft_check_len(char *input, char c);
-int		ft_check_max(int nb);
-void	ft_show_stack(t_data *data, int stack, int len);
+void	ft_check_max(t_data *data, long res);
+int		ft_atoi_limit(t_data *data, const char *str);
 void	ft_reverse_stack(t_data *data);
 void	ft_sa(t_data *data, int is_op);
 void	ft_sb(t_data *data, int is_op);

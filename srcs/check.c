@@ -6,24 +6,45 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:21:14 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/03 19:12:05 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/10 10:50:38 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/push_swap.h"
 
-int	ft_check_max(int nb)
+void	ft_check_max(t_data *data, long res)
 {
-	int	min;
-	int	max;
+	if (res > 2147483647)
+		data->int_limit = 1;
+	if (res < -2147483648)
+		data->int_limit = 1;
+}
 
-	min = -2147483648;
-	max = 2147483647;
-	if (nb > max)
-		return (ERROR);
-	if (nb < min)
-		return (ERROR);
-	return (SUCCESS);
+int	ft_atoi_limit(t_data *data, const char *str)
+{
+	int		i;
+	int		sign;
+	long	res;
+
+	i = 0;
+	res = 0;
+	sign = 1;
+	while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (ft_isdigit(str[i]))
+	{
+		res = res * 10 + str[i] - 48;
+		i++;
+	}
+	res *= sign;
+	ft_check_max(data, res);
+	return ((int)res);
 }
 
 int	ft_check_len(char *input, char c)
