@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:21:14 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/10 10:50:38 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/10 11:45:39 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ int	ft_check_len(char *input, char c)
 	i = 0;
 	len = 0;
 	is_char = 1;
+	while (input[i] == ' ')
+		i++;
 	while (input[i])
 	{
 		if (input[i] != c && is_char)
