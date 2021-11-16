@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:14:25 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/16 11:21:03 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/16 13:46:58 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,8 +110,8 @@ int	ft_parse_input(t_data *data, int argc, char **argv)
 			ft_free_input(input);
 			return (ERROR);
 		}
+		ft_free_input(input);
 	}
-	ft_free_input(input);
 	ft_reverse_stack(data);
 	return (SUCCESS);
 }
