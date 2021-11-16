@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:14:25 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/10 11:48:01 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/16 11:21:03 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,30 @@ void	ft_reverse_stack(t_data *data)
 	}
 }
 
+int	ft_find_digit(char **input)
+{
+	int	i;
+	int	j;
+	int	is_digit;
+
+	i = 1;
+	while (input[i])
+	{
+		j = 0;
+		is_digit = 0;
+		while (input[i][j])
+		{
+			if (input[i][j] >= 48 && input[i][j] <= 57)
+				is_digit = 1;
+			j++;
+		}
+		if (is_digit == 0)
+			return (ERROR);
+		i++;
+	}
+	return (SUCCESS);
+}
+
 int	ft_check_input(t_data *data, char **input)
 {
 	int	tmp_i;
@@ -75,6 +99,8 @@ int	ft_parse_input(t_data *data, int argc, char **argv)
 	while (i < argc)
 		len += ft_check_len(argv[i++], ' ');
 	ft_init_data(data, len);
+	if (ft_find_digit(argv) == ERROR)
+		return (ERROR);
 	i = 1;
 	while (i < argc)
 	{
