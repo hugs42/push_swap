@@ -6,7 +6,7 @@
 /*   By: hugsbord <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:14:25 by hugsbord          #+#    #+#             */
-/*   Updated: 2021/11/16 13:46:58 by hugsbord         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:50:40 by hugsbord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,24 @@ int	ft_find_digit(char **input)
 	int	i;
 	int	j;
 	int	is_digit;
+	int	count_digit;
 
 	i = 1;
 	while (input[i])
 	{
 		j = 0;
 		is_digit = 0;
+		count_digit = 0;
 		while (input[i][j])
 		{
 			if (input[i][j] >= 48 && input[i][j] <= 57)
+			{
 				is_digit = 1;
+				count_digit++;
+			}
 			j++;
 		}
-		if (is_digit == 0)
+		if (is_digit == 0 || count_digit > 17)
 			return (ERROR);
 		i++;
 	}
